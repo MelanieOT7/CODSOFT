@@ -3,34 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codsoft-Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <title>Practise-Codsoft</title>
     <style>
-      body {
-        background-color: beige;
-        margin: 85px;
-        box-shadow: 0 3px 5px;
+      .container-body {
+        background-color: rgb(210, 210, 185);
+        
       }
+     
       header {
         margin-top: 0;
         padding: 15px;
         background-color: grey;
       }
-      img {
-        border-radius: 50%;
-        border: 2px solid black;
-      }
-      .header {
-        margin-left: 50px;
-      }
+     
+     
 
-      .summary {
-        display: flex;
-        justify-content: flex-end;
-      }
-
+      
       .about {
         display: flex;
         justify-content: space-evenly;
+        margin-top: 90px;
       }
       .projects {
         display: flex;
@@ -56,8 +60,9 @@
         justify-content: center;
       }
       footer {
-        background-color: grey;
+        background-color: rgb(80, 76, 76);
         padding: 10px;
+        color: black;
       }
       a {
         color: white;
@@ -76,25 +81,83 @@
       .h3 {
         margin-bottom: 0px;
       }
-      #my-image {
-        margin-top: 70px;
-      }
     </style>
-
-    <header>
-      <div class="summary">
-        <div><img src="images/logo.png" alt="" width="30" /></div>
-        <div class="header">Home</div>
-        <div class="header"><a href="#about">About</a></div>
-        <div class="header"><a href="#skills">Skills</a></div>
-        <div class="header"><a href="#project">Projects</a></div>
-        <div class="header"><a href="#my-resume">Resume</a></div>
-        <div class="header"><a href="#contact-me">Contacts</a></div>
-      </div>
-    </header>
   </head>
+
   <body>
-    <div class="about" id="about">
+    <div class="container-body">
+      <div class="header">
+        <nav
+          class="navbar navbar-expand-lg navbar-dark fixed-top"
+          style="background-color: grey"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            
+              <div><h4><img src="Landing-page\logo.png" alt="" width="30" /></h4></div>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#homepage"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#about"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#skills"
+                    >Skills</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#project"
+                    >Projects</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#my-resume"
+                    >Resume</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#contact-me"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <br />
+      <div class="about" id="about" >
       <div>
         <h2>Hello,<br />I am Nontando Carol Ngcobo</h2>
         <p class="brief-intro">
@@ -120,57 +183,85 @@
 
       <div>
         <img
-          id="my-image"
-          src="images/image2.png
-            "
+          src="Landing-page\image2.png"
+           class="img-fluid img-thumbnail  mt-50"
           alt="my image"
         />
+       
       </div>
     </div>
 
     <hr />
 
     <div class="bio">
-      <h3>About</h3>
-      experienced in collaborating with<br />
+      
+      <div class="card text-center">
+  <div class="card-header">
+    <h2>About</h2>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Experience</h5>
+    <p class="card-text">experienced in collaborating with<br />
       groupmates to complete project and challenges.<br />
-      I have build advertisement and weather app
+      I have build advertisement and weather app</p>
+    <a href="#homepage" class="btn btn-primary">Back to top</a>
+  </div>
+ 
+</div>
+
     </div>
     <hr />
     <br />
     <h3 class="my-projects">My Projects</h3>
     <div class="projects" id="project">
-      <div id="projects">
-        <div>
-          tittle: Advertisement
-          <br />
+     
+    
+        <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="Landing-page\ad2.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Advertisement</h5>
+        <p class="card-text"> <br />
           description: Yogurt advert <br />including a link to wikipedia<br />
-          website for more information
-        </div>
-        <div>
-          <img src="images/ad2.png" alt="" width="200" />
-        </div>
+          website for more information</p>
       </div>
+    </div>
+  </div>
 
-      <div id="projects">
-        <div>
-          tittle: Weather App
-          <br />description: Building a weather app using API
-        </div>
-        <div>
-          <img src="images/weather-app-img.png" alt="" width="200" />
-        </div>
       </div>
+       <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="Landing-page\weather-app-img.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Weather Website</h5>
+        <p class="card-text"> <br />
+          Building a weather website using API</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
 
     <br />
     <div class="resume" id="my-resume">
       <div>download Resume</div>
       <div>
-        <a href="images/MS NC.Ngcobo CV Resume-Copy.pdf" download="Resume-Copy">
-          <img src="images/download.jpg" alt="" width="100" />
+        <a href="Landing-page\MS NC.Ngcobo CV Resume-Copy.pdf" download="Resume-Copy">
+          <img src="Landing-page\download.jpg" alt="" width="100" />
         </a>
       </div>
+     
+    </div>
+
+    <footer><p>© copyright 2024 all rights reserved</p>
       <div id="contact-me">
         <ul class="contact-details">
           Contact me
@@ -178,8 +269,6 @@
           <li>📧 : carolnontando@gmail.com</li>
         </ul>
       </div>
-    </div>
-
-    <footer><p>© copyright 2024 all rights reserved</p></footer>
+      </footer>
   </body>
 </html>
