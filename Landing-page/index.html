@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing-page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <title>Landing Page</title>
     <style>
-      .container {
+      .container-body {
         display: block;
         margin: 0 auto;
         background: #b4b3b3;
@@ -17,15 +29,13 @@
         margin-top: 60px;
         position: relative;
       }
-      .header {
-        background-color: #5f9103;
-        padding: 6px;
-      }
-      .homepage {
-        display: flex;
 
-        justify-content: end;
+      .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
       }
+
       #header {
         margin-right: 35px;
         font-size: 16px;
@@ -37,18 +47,26 @@
         cursor: pointer;
       }
       #logo {
+        display: flex;
         font-family: Georgia, "Times New Roman", Times, serif;
         font-size: 20px;
         color: white;
       }
+      .image-container {
+        position: relative;
+      }
+
+      .image-wrapper {
+        position: relative;
+      }
       .image-text {
         position: absolute;
-        top: 7%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        color: rgb(174, 168, 168);
-        font-size: 50px;
+        color: rgb(0, 0, 0);
+        font-size: 30px;
       }
       body {
         background-image: url("https://envato-shoebox-0.imgix.net/93fe/f9e9-8805-472b-9374-b7f1321d162b/1301p-1.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=1000&fit=max&markalign=center%2Cmiddle&markalpha=18&s=4c67e3706f30afd12ac97fa7ae6eba1c");
@@ -95,35 +113,85 @@
         background-color: #676262;
         padding: 10px;
       }
-      #footer {
-        margin-bottom: 0;
-      }
     </style>
   </head>
+
   <body>
-    <div class="container">
+    <div class="container-body">
       <div class="header">
-        <div id="logo">
-          <div>Furniture</div>
-          <div>Of Choice 🛋</div>
-        </div>
-        <div class="homepage" id="homepage">
-          <div id="header"><a href="#homepage">Home</a></div>
-          <div id="header"><a href="#about">About</a></div>
-          <div id="header"><a href="#sofa">our-services</a></div>
-          <div id="header"><a href="#types">More-info</a></div>
-          <div id="header"><a href="#notice">Notice</a></div>
-          <div id="header"><a href="#contact-us"> Contac-tUs</a></div>
-        </div>
+        <nav
+          class="navbar navbar-expand-lg navbar-dark fixed-top"
+          style="background-color: #4c4f47"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <div><h3>Of Choice 🛋</h3></div>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#homepage"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#about"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#sofa"
+                    >Our Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#types"
+                    >More Info</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#notice"
+                    >Notice</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#contact-us"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
+
       <div class="image-container">
-        <img
-          class="first-image"
-          src="https://as1.ftcdn.net/v2/jpg/06/51/16/06/1000_F_651160673_0A54709ikM1ibJE20y0nkW2JzQWkD6ta.jpg"
-          alt=""
-          width="100%"
-        />
-        <div class="image-text">FURNITURE OF CHOICE</div>
+        <div class="image-wrapper">
+          <img
+            class="first-image"
+            src="https://as1.ftcdn.net/v2/jpg/06/51/16/06/1000_F_651160673_0A54709ikM1ibJE20y0nkW2JzQWkD6ta.jpg"
+            alt=""
+            width="100%"
+          />
+          <div class="image-text">FURNITURE OF CHOICE</div>
+        </div>
       </div>
       <h1>Couches ⇄ Armchairs ⇄ Chairs</h1>
 
@@ -163,13 +231,16 @@
           </p>
         </div>
       </div>
+
       <div>
         <p>
           You want to upgrade your Sitting and don't know where to start, well
           look no further because we got you.
           <a href="#more-info"> more info...</a>
         </p>
-        <p class="notice" id="notice">WeDoNotSell!</p>
+        <button type="button" class="btn btn-secondary ps-10" id="notice">
+          We Do Not Sell!!!
+        </button>
       </div>
       <div>
         <p id="about">
@@ -180,6 +251,7 @@
           fabric.
         </p>
       </div>
+
       <div class="types" id="types">
         <div>
           <div>
@@ -280,13 +352,14 @@
           </div>
         </div>
       </div>
+
       <footer>
+        <p>©Carol2024 -all rights reserved</p>
         <div class="contact-us" id="contact-us">
           <p class="briefing">📧 email : carolnontando@gmail.com</p>
           <p class="briefing">📱 phone: +27600045000</p>
           <p class="briefing">📠 fax: +276007001</p>
           <p class="briefing">📢 :South Africa</p>
-          <p id="footer">©Carol2024 -all rights reserved</p>
         </div>
       </footer>
     </div>
